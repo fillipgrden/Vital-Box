@@ -1,0 +1,49 @@
+#juicing .container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#juicing .container .fadeIn {
+    width: 50%;
+}
+
+#juicing .container .img {
+    width: 100%;
+    height: 100%;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#juicing .container .juicing-content {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #a9c90a;
+    color: #222222;
+}
+
+#juicing .container .juicing-content p {
+    font-size: 1.5em;
+    width: 80%;
+}
+
+@media(max-width: 768px) {
+    #juicing .container {
+        flex-direction: column;
+    }
+    #juicing .container .fadeIn {
+        width: 100%;
+        height: 50%;
+    }
+    #juicing .container .juicing-content {
+        width: 100%;
+        height: auto;
+        order: 2;
+    }
+
+}

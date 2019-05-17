@@ -1,0 +1,53 @@
+#detox .container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+#detox .container div {
+    width: 50%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#detox .container .detox-content {
+    background: #222222;
+}
+
+#detox .container .detox-content h2,
+#detox .container .detox-content p {
+    text-align: center;
+    color: #a9c90a;
+}
+
+#detox .container .detox-content p {
+    font-size: 1.5em;
+}
+
+#detox .container .detox-content .flipInX {
+    width: 100%;
+}
+
+#detox .container .detox-content .wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+@media(max-width: 768px) {
+    #detox .container {
+        flex-direction: column;
+    }
+    #detox .container div {
+        width: 100%;
+        height: 50%;
+    }
+    #detox .container .detox-content .wrapper {
+        height: auto;
+    }
+}

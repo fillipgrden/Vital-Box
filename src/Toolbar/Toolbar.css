@@ -1,0 +1,134 @@
+.toolbar {
+    position: fixed;
+    background: #FFFFFF;
+    text-align: center;
+    width: 100%;
+    z-index: 99;
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+}
+
+.toolbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toolbar .logo {
+    height: 100px;
+}
+
+.toolbar .logo img {
+    height: 100%;
+}
+
+.toolbar .toolbar-items {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.toolbar .container ul li {
+    height: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+}
+
+.toolbar li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    display: block;
+    height: 10px;
+    background: #a9c90a;
+    transition: width .3s;
+}
+
+.toolbar li:hover::after {
+    width: 100%;
+}
+
+.toolbar .logo a:hover::after {
+    width: 0;
+}
+
+.toolbar .order {
+    height: 100px;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #A9C90A;
+}
+
+.toolbar .order a {
+    color: #FFFFFF;
+}
+
+.toolbar .order a:hover {
+    color: #222222;
+}
+
+.dropdown {
+    visibility: hidden;
+    opacity: 0;
+    min-width: 10rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    transform: translateX(-50%);
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: 1px solid #ffffff;
+    margin: 0;
+}
+
+.dropdown-link {
+    font-family: 'Quattrocento', serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: #222222;
+    transition: all 0.3s;
+    font-size: 17px;
+}
+
+.dropdown-link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+@media(max-width: 768px) {
+    .toolbar .toolbar-items {
+        display: none;
+    }
+
+    .toolbar .container .order {
+        display: none;
+    }
+    .dropdown {
+        display: flex;
+        width: 100%;
+        text-align: center;
+        visibility: visible;
+        opacity: 1;
+        height: 0;
+    }
+}
+
+.dropdown-box {
+    height: 100%;
+}
+
+.dropdown-box:hover .dropdown {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+}

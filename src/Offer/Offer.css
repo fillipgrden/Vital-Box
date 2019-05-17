@@ -1,0 +1,70 @@
+.offer {
+    height: auto;
+    padding-top: 150px;
+    margin-bottom: 50px;
+}
+
+.offer .container p {
+    font-weight: bold;
+}
+
+.offer h2 {
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    margin: 0;
+    padding: 15px 0;
+    margin-top: 30px;
+    background: #222222;
+    color: #a9c90a;
+}
+
+.offer .container .offer-container {
+    display: flex;
+}
+
+.offer .container .offer-container ul {
+    text-align: center;
+    width: 20%;
+    padding: 0;
+    margin: 0;
+}
+
+.offer .container .offer-container ul li {
+    position: relative;
+    padding: 15px;
+    border: 1px solid #222222;
+    transition: all 0.4s;
+    height: 60px;
+}
+
+.offer .container .offer-container ul li a{
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    transform: translate(-50%, -29%);
+    opacity: 0;
+}
+
+.offer .container .offer-container ul li a:hover {
+    opacity: 1;
+}
+
+.offer .container .offer-container ul li a button {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    background-color: #a9c90a;
+    color: #222222;
+    font-weight: bold;
+    border: 0;
+    transition: all 0.4s;
+}
+
+.offer .container .offer-container ul li:first-child {
+    font-weight: bold;
+}
+
+.offer .container .three-meals ul {
+    width: 25%;
+}

@@ -1,33 +1,126 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Quattrocento');
+
+* {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+html {
+    font-size: 17px;
+    font-family: 'Quattrocento', serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (max-width: 900px) {
+    html {
+        font-size: 15px;
+    }
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width: 400px) {
+    html {
+        font-size: 13px;
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Modules will scale with document */
+.header {
+    font-size: 1.5rem;
+}
+
+.footer {
+    font-size: 0.75rem;
+}
+
+.sidebar {
+    font-size: 0.85rem;
+}
+
+/* Type will scale with modules */
+h1 {
+    font-size: 3em;
+    font-family: 'Cinzel', serif;
+    margin: 15px 0px;
+}
+
+h2 {
+    font-size: 2.5em;
+    font-family: 'Quattrocento', serif;
+    margin: 15px 0px;
+}
+
+h3 {
+    font-size: 2em;
+    font-family: 'Cinzel', serif;
+    margin: 15px 0px;
+}
+
+p {
+    margin: 15px 0px;
+}
+
+section {
+    height: calc(100vh - 100px);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+a {
+    font-family: 'Quattrocento', serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: #222222;
+    transition: all 0.3s;
+}
+
+.fade-enter {
+    opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+}
+
+div.transition-group {
+    position: relative;
+}
+
+section.route-section {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: auto;
+}
+
+@media(max-width: 768px) {
+   .toolbar .toolbar-items {
+     display: none;
+   }
+    .toolbar .container .order {
+        display: none;
+    }
+    .contact .background-image .mask .container {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) {
+    .toolbar-toggle-button {
+        display: none;
+    }
 }

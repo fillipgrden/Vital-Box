@@ -1,26 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter as Router} from "react-router-dom";
+import Toolbar from './Toolbar/Toolbar'
+import Container from './Container'
+import SideDrawer from './SideDrawer/SideDrawer'
+import Backdrop from './Backdrop/Backdrop'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+    state = {
+        sideDrawerOpen: false
+    }
+
+    drawerToggleClickHandler = () => {
+        this.setState((prevState) => {
+            return {sideDrawerOpen: !prevState.sideDrawerOpen};
+        });
+    };
+
+    backgropClickHandler = () => {
+      this.setState({sideDrawerOpen: false})
+    };
+
+    render() {
+        let backdrop;
+
+        if(this.state.sideDrawerOpen) {
+            backdrop = <Backdrop click={this.backgropClickHandler}/>;
+        }
+        return (
+            <div className="App">
+                <Router>
+                    <div>
+                        <Toolbar drawerClickHandler={this.drawerToggleClickHandler}/>
+                        <SideDrawer show={this.state.sideDrawerOpen}/>
+                        {backdrop}
+                        <Container/>
+                    </div>
+                </Router>
+            </div>
+        );
+    }
 }
 
 export default App;
