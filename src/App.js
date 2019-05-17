@@ -9,24 +9,23 @@ import Backdrop from './Backdrop/Backdrop'
 class App extends React.Component {
     state = {
         sideDrawerOpen: false
-    }
+    };
 
     drawerToggleClickHandler = () => {
-        this.setState((prevState) => {
-            return {sideDrawerOpen: !prevState.sideDrawerOpen};
+        this.setState({
+            sideDrawerOpen: !this.state.sideDrawerOpen
         });
     };
 
-    backgropClickHandler = () => {
-      this.setState({sideDrawerOpen: false})
+    backgroupClickHandler = () => {
+        this.setState({sideDrawerOpen: false})
     };
 
     render() {
-        let backdrop;
+        const backdrop = this.state.sideDrawerOpen
+            ? <Backdrop click={this.backgroupClickHandler}/>
+            : undefined;
 
-        if(this.state.sideDrawerOpen) {
-            backdrop = <Backdrop click={this.backgropClickHandler}/>;
-        }
         return (
             <div className="App">
                 <Router>

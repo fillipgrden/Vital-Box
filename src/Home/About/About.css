@@ -1,0 +1,13 @@
+#about {
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+#about .container {
+    padding: 100px 0;
+}
+
+#about h2 {
+    text-align: center;
+}

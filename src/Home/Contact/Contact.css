@@ -1,0 +1,129 @@
+.contact {
+    height: auto;
+}
+
+.contact .container {
+    margin: 100px auto;
+}
+
+.contact .background-image {
+    height: 100%;
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.contact .background-image .mask {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(34, 34, 34, 0.6);
+}
+
+.contact .background-image .mask .animated{
+    width: 100%;
+}
+
+.contact .background-image .mask .container {
+    display: flex;
+    align-items: center;
+}
+
+.contact .background-image .mask .container .vcard {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFFFFF;
+}
+
+.contact .background-image .mask .container .vcard h2 {
+    color: #a9c90a;
+}
+
+.contact .background-image .mask .container .vcard a{
+    margin-bottom: 15px;
+    color: #FFFFFF;
+}
+
+.contact .background-image .mask .container .vcard a:hover {
+    color: #a9c90a;
+}
+
+.contact .background-image .mask .container .vcard a i{
+    margin-right: 30px;
+}
+
+.contact .background-image .mask .container .form-container {
+    width: 50%;
+    background-color: #FFFFFF;
+}
+
+.contact .background-image .mask .container .form-container h3 {
+    background-color: #222222;
+    color: #a9c90a;
+    text-align: center;
+    margin: 0;
+    padding: 15px 0;
+}
+
+.contact .background-image .mask .container .form-container form {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.contact .background-image .mask .container .form-container form input,
+.contact .background-image .mask .container .form-container form textarea  {
+    padding: 15px 5px;
+    color: #222222;
+    border: 0;
+    border-bottom: 2px solid #222222;
+}
+
+.contact .background-image .mask .container .form-container form input:focus,
+.contact .background-image .mask .container .form-container form textarea:focus {
+    outline: none;
+    border-color: #a9c90a;
+}
+
+.contact .background-image .mask .container .form-container form textarea {
+    width: 70%;
+    height: 100px;
+    padding: 15px 5px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.contact .background-image .mask .container .form-container form button {
+    width: auto;
+    border: 0;
+    margin: 15px 10px;
+}
+
+.contact .background-image .mask .container .form-container form .input-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact .background-image .mask .container .form-container form .input-container input {
+    width: 45%;
+    margin: 15px 0;
+}
+
+.contact label {
+    margin: 15px 10px;
+}
+
+@media(max-width: 768px) {
+    .contact .background-image .mask .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .contact .background-image .mask .container .form-container {
+        width: 100%;
+        order: -1;
+        margin-bottom: 30px;
+    }
+}

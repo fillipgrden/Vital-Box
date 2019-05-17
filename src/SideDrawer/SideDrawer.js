@@ -6,10 +6,11 @@ import {NavHashLink as NavLink} from "react-router-hash-link";
 import {Link} from "react-router-dom";
 
 const sideDrawer = props => {
-    let drawerClasses = 'side-drawer';
-    if (props.show) {
-        drawerClasses = 'side-drawer open';
-    }
+
+    const drawerClasses = props.show
+        ? 'side-drawer open'
+        : 'side-drawer';
+
     return (
         <ul className={drawerClasses}>
             <li>
@@ -49,5 +50,6 @@ const sideDrawer = props => {
         </ul>
 
     )
-}
+};
+
 export default sideDrawer;

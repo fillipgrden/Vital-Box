@@ -1,13 +1,11 @@
 import React from 'react';
 import './App.css';
 import {Route, Switch, withRouter} from "react-router-dom";
-import Head from './Head/Head'
-import About from './About/About'
-import Contact from './Contact/Contact'
 import Offer from './Offer/Offer'
 import Calculator from './Calculator/Calculator'
 import  Delivers from './Delivers/Delivers'
 import {CSSTransition, TransitionGroup} from "react-transition-group-v2";
+import Home from "./Home/Home";
 
 function Container({location}) {
     return (
@@ -20,12 +18,10 @@ function Container({location}) {
                 >
                     <section className="route-section">
                         <Switch location={location}>
-                            <Route exact path="/" component={Head}/>
-                            <Route exact path="/#about" component={About}/>
-                            <Route exact path="/#contact" component={Contact}/>
-                            <Route path="/offer/" component={Offer}/>
-                            <Route path="/delivers/" component={Delivers}/>
-                            <Route path="/calculator" component={Calculator}/>
+                            <Route exact path="/" component={Home}/>
+                            <Route exact path="/offer" component={Offer}/>
+                            <Route exact path="/delivers" component={Delivers}/>
+                            <Route exact path="/calculator" component={Calculator}/>
                         </Switch>
                     </section>
                 </CSSTransition>
