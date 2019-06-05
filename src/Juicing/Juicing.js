@@ -21,10 +21,7 @@ class Juicing extends React.Component {
                     <div className="container">
                         <div className="juicing-content ">
                             <h2>SOKOTERAPIA</h2>
-                            <p>Sokoterapia ma bardzo wiele pozytywnych zastosowań poza tym, że jest ona jedną z
-                                niekonwekcjonalnych metod leczenia , dostarcza ona wszytskich witamin oraz minerałów
-                                niezbędnych do zdrowego funkcjonowania , co więcej przy jej pomocy znacznie wzrasta
-                                nasza odporność (35zł za dwa soki dziennie).</p>
+                            <p>s</p>
                         </div>
                         <ScrollAnimation animateIn="fadeIn">
                             <div className="img" style={juicingImage}>

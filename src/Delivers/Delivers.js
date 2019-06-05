@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import '../App.css';
 import "animate.css/animate.min.css";
 import deliver from "../img/deliver.jpg";
@@ -6,14 +6,7 @@ import "./Delivers.css"
 
 
 class Delivers extends React.Component {
-    constructor(props, context) {
-        super(props, context);
-    }
-
     render() {
-        const deliverImage = {
-            backgroundImage: `url(${deliver})`
-        }
         return (
             <div>
                 <section name="delivers" id="delivers">

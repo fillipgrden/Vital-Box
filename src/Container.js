@@ -20,8 +20,9 @@ function Container({location}) {
                         <Switch location={location}>
                             <Route exact path="/" component={Home}/>
                             <Route exact path="/offer" component={Offer}/>
-                            <Route exact path="/delivers" component={Delivers}/>
-                            <Route exact path="/calculator" component={Calculator}/>
+                            <Route exact path="/offer/" component={Offer}/>
+                            <Route exact path="/delivers/" component={Delivers}/>
+                            <Route exact path="/calculator/" component={Calculator}/>
                         </Switch>
                     </section>
                 </CSSTransition>

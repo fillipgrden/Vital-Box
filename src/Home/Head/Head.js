@@ -4,6 +4,7 @@ import beans from '../../img/beans-close-up-cuisine-1640771.jpg';
 import bowl from '../../img/bowl-cereal-bowl-cereals-1374551.jpg';
 import {Link as L} from "react-scroll";
 import "./Head.css";
+import logo from "../../img/vital-box-logo_ok.png";
 
 class Head extends React.Component {
     render() {
@@ -18,7 +19,7 @@ class Head extends React.Component {
         };
         return (
             <div>
-                <header id="header" className="header">
+                <header id="header" className="header" title="VitalBox - Katering Dietetyczny Kielce">
                     <div className="container-img">
                         <div className="container content">
                             <h1>Vital Box</h1>
@@ -36,9 +37,12 @@ class Head extends React.Component {
                             <div className="mask"/>
                         </div>
                         <div className="container-social">
-                            <a href=""><i className="far fa-envelope"/></a>
-                            <a href=""><i className="fab fa-facebook-f"/></a>
-                            <a href=""><i className="fab fa-instagram"/></a>
+                            <a href="mailto:vitalbox@op.pl"><i className="far fa-envelope"/></a>
+                            <a href="https://www.facebook.com/Vital-Box-339557800252612/"><i className="fab fa-facebook-f"/></a>
+                            <a href="https://www.instagram.com/vital.box_/"><i className="fab fa-instagram"/></a>
+                        </div>
+                        <div className="logo">
+                                <img src={logo} alt=""/>
                         </div>
                     </div>
                 </header>

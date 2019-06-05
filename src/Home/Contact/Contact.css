@@ -31,10 +31,11 @@
 }
 
 .contact .background-image .mask .container .vcard {
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     color: #FFFFFF;
 }
 
@@ -125,5 +126,8 @@
         width: 100%;
         order: -1;
         margin-bottom: 30px;
+    }
+    .contact .background-image .mask .container .vcard {
+        width: 100%;
     }
 }

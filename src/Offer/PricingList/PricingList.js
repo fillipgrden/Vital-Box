@@ -59,9 +59,9 @@ class PricingList extends React.Component {
                     <p>Bezglutenowa +5zł</p>
                     <p>Wegetariańska +5zł</p>
                     <p>Bez laktozy +5zł</p>
-                    <p>Chleb gryczany bezglutenowy (400g) – 14 zł </p>
+                    <p>Chleb gryczany (400g) – 14 zł </p>
                     <ScrollAnimation animateIn="fadeIn">
-                        <h2>OFERTA NA 3 POSIŁKÓW</h2>
+                        <h2>OFERTA NA 3 POSIŁKI</h2>
                         <div className="offer-container three-meals">
                             <ul>
                                 <li>Kcal</li>

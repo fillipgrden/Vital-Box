@@ -12,10 +12,9 @@ const Toolbar = props => {
             <nav className="toolbar">
                 <div className="container">
                     <div>
-                        <div className="logo">
-                            <NavLink to="/#header"
-                                     scroll={el => el.scrollIntoView({scrollOffset: -100})}>
-                                <img src={logo} alt=""/>
+                        <div className="logo" itemType="http://schema.org/Organization" itemScope>
+                            <NavLink to="/#header">
+                                <img src={logo} alt="Vitalbox logo"/>
                             </NavLink>
                         </div>
                     </div>
@@ -32,15 +31,15 @@ const Toolbar = props => {
                         </span>
                                 <ul className="dropdown">
                                     <li>
-                                        <NavLink smooth={true} to="/offer/#offer" offset={-100}>
+                                        <NavLink smooth={true} to="/offer/#offer">
                                             CENNIK
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink smooth={true} to="/offer/#detox" offset={-100}>DETOX</NavLink>
+                                        <NavLink smooth={true} to="/offer/#detox">DETOX</NavLink>
                                     </li>
                                     <li>
-                                        <NavLink smooth={true} to="/offer/#juicing" offset={-100}>TERAPIA
+                                        <NavLink smooth={true} to="/offer/#juicing">TERAPIA
                                             SOKOWA
                                         </NavLink>
                                     </li>

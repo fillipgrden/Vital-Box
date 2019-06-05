@@ -1,9 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react';
 import '../App.css';
 import cusine from '../img/berries-bowl-colorful-1105166.jpg';
 import "animate.css/animate.min.css";
 import ScrollAnimation from 'react-animate-on-scroll';
-import "./Contact.css"
+import "./Contact.css";
+import BackgroundImage from 'react-background-image-loader';
 
 
 class Contact extends React.Component {
@@ -152,6 +153,7 @@ class Contact extends React.Component {
         return (
             <div>
                 <section id="contact" name="contact" className="contact">
+                    <BackgroundImage src={}> </BackgroundImage>
                     <div className="background-image" style={backgroundImage}>
                         <div className="mask">
                             <ScrollAnimation animateIn="fadeIn">

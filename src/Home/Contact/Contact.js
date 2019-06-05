@@ -12,6 +12,7 @@ class Contact extends React.Component {
         tel: "",
         mail: "",
         message: "",
+        adress: "",
         accept: false,
         sent: "",
 
@@ -22,6 +23,7 @@ class Contact extends React.Component {
             mail: false,
             message: false,
             accept: false,
+            adress: false
         }
     };
 
@@ -32,6 +34,7 @@ class Contact extends React.Component {
         tel_incorect: "Brak lub niepoprawny numer telefonu",
         message_incorect: "Wpisz swoją wiadomość",
         accept_incorect: "Zakacpetuj regulamin",
+        adress_incorect: "Brak adressu dostawy",
     };
 
     handleChange = (e) => {
@@ -41,9 +44,9 @@ class Contact extends React.Component {
         const checked = e.target.checked;
         if (type === "checkbox") {
             const checked = e.target.checked;
-            this.setState(({
+            this.setState({
                 [name]: checked,
-            }))
+            });
         } else {
             this.setState({
                 [name]: value,
@@ -62,6 +65,7 @@ class Contact extends React.Component {
                 tel: "",
                 mail: "",
                 message: "",
+                adress: "",
                 accept: false,
                 sent: "Wiadomość została wysłąna.",
 
@@ -71,6 +75,7 @@ class Contact extends React.Component {
                     tel: false,
                     mail: false,
                     message: false,
+                    adress: false,
                     accept: false,
                 }
             })
@@ -82,6 +87,7 @@ class Contact extends React.Component {
                     tel: !validation.tel,
                     mail: !validation.name,
                     message: !validation.message,
+                    adress: !validation.adress,
                     accept: !validation.accept
                 }
             })
@@ -94,6 +100,7 @@ class Contact extends React.Component {
         let tel = false;
         let mail = false;
         let message = false;
+        let adress = false;
         let accept = false;
         let correct = false;
 
@@ -115,6 +122,9 @@ class Contact extends React.Component {
         if (this.state.message !== "") {
             message = true;
         }
+        if (this.state.message !== "") {
+           adress = true;
+        }
         if (this.state.accept) {
             accept = true;
         }
@@ -128,6 +138,7 @@ class Contact extends React.Component {
             tel,
             mail,
             message,
+            adress,
             accept
         })
 
@@ -154,7 +165,9 @@ class Contact extends React.Component {
                             <div className="container">
                                 <div className="vcard">
                                     <h2>KONTAKT</h2>
-                                    <p>NIP : 959 001 25 80</p>
+                                    <p>NIP : 6572945041</p>
+                                    <p>Regon : 3833833636</p>
+                                    <p>NR KONTA : 62 1140 2004 0000 3902 7880 1638</p>
                                     <a href="tel:+48533182000">
                                         <i className="fa fa-phone" aria-hidden="true"></i>
                                         533182000</a>
@@ -165,46 +178,49 @@ class Contact extends React.Component {
                                         <i className="fa fa-envelope" aria-hidden="true"></i>
                                         vitalbox@op.pl</a>
                                 </div>
-                                <div className="form-container">
-                                    <h3>Czekamy na twoje zamówienie</h3>
-                                    <form onSubmit={this.handleSubmit}>
-                                        <div className="input-container">
-                                            <input type="text" id="name" name="name" value={this.state.name}
-                                                   onChange={this.handleChange} placeholder="Imię"/>
-                                            <input type="text" id="surname" name="surname"
-                                                   value={this.state.surname} onChange={this.handleChange}
-                                                   placeholder="Nazwisko"/>
-                                        </div>
-                                        <div className="input-container">
-                                            <input type="text" id="tel" name="tel" value={this.state.tel}
-                                                   onChange={this.handleChange} placeholder="Numer telefonu"/>
-                                            <input type="email" id="mail" name="mail" value={this.state.mail}
-                                                   onChange={this.handleChange} placeholder="Adres e-mail"/>
-                                        </div>
-                                        <textarea name="message" id="message" value={this.state.message}
-                                                  onChange={this.handleChange}
-                                                  placeholder="Złóż zamówienie"/>
-                                        <label htmlFor="accept">
-                                            <input type="checkbox" id="accept" name="accept"
-                                                   checked={this.state.accept} onChange={this.handleChange}/>
-                                            Zapoznałem się z regulaminem oraz wyrażam zgodę na przetwarzanie moich
-                                            danych?
-                                        </label>
-                                        <div>
-                                            <button className="hvr-sweep-to-top">WYŚLIJ</button>
-                                            {this.state.errors.name && <span>{this.messages.NAME_INCORECT}</span>}
-                                            {this.state.errors.surname &&
-                                            <span>{this.messages.SURNAME_INCORECT}</span>}
-                                            {this.state.errors.tel && <span>{this.messages.tel_incorect}</span>}
-                                            {this.state.errors.mail && <span>{this.messages.mail_incorect}</span>}
-                                            {this.state.errors.message &&
-                                            <span>{this.messages.message_incorect}</span>}
-                                            {this.state.errors.accept &&
-                                            <span>{this.messages.accept_incorect}</span>}
-                                            {this.state.sent && <span>{this.state.sent}</span>}
-                                        </div>
-                                    </form>
-                                </div>
+                                {/*<div className="form-container">*/}
+                                {/*    <h3>Czekamy na twoje zamówienie</h3>*/}
+                                {/*    <form onSubmit={this.handleSubmit}>*/}
+                                {/*        <div className="input-container">*/}
+                                {/*            <input type="text" id="name" name="name" value={this.state.name}*/}
+                                {/*                   onChange={this.handleChange} placeholder="Imię"/>*/}
+                                {/*            <input type="text" id="surname" name="surname"*/}
+                                {/*                   value={this.state.surname} onChange={this.handleChange}*/}
+                                {/*                   placeholder="Nazwisko"/>*/}
+                                {/*        </div>*/}
+                                {/*        <div className="input-container">*/}
+                                {/*            <input type="text" id="tel" name="tel" value={this.state.tel}*/}
+                                {/*                   onChange={this.handleChange} placeholder="Numer telefonu"/>*/}
+                                {/*            <input type="email" id="mail" name="mail" value={this.state.mail}*/}
+                                {/*                   onChange={this.handleChange} placeholder="Adres e-mail"/>*/}
+                                {/*        </div>*/}
+                                {/*        <input type="text" id="adress" name="adress" value={this.state.adress}*/}
+                                {/*               onChange={this.handleChange} placeholder="Wpisz adess dostawy"/>*/}
+                                {/*        <textarea name="message" id="message" value={this.state.message}*/}
+                                {/*                  onChange={this.handleChange}*/}
+                                {/*                  placeholder="Złóż zamówienie"/>*/}
+                                {/*        <label htmlFor="accept">*/}
+                                {/*            <input type="checkbox" id="accept" name="accept"*/}
+                                {/*                   checked={this.state.accept} onChange={this.handleChange}/>*/}
+                                {/*            Zapoznałem się z regulaminem oraz wyrażam zgodę na przetwarzanie moich*/}
+                                {/*            danych.*/}
+                                {/*        </label>*/}
+                                {/*        <div>*/}
+                                {/*            <button className="hvr-sweep-to-top">WYŚLIJ</button>*/}
+                                {/*            {this.state.errors.name && <p>{this.messages.NAME_INCORECT}</p>}*/}
+                                {/*            {this.state.errors.surname &&*/}
+                                {/*            <p>{this.messages.SURNAME_INCORECT}</p>}*/}
+                                {/*            {this.state.errors.tel && <p>{this.messages.tel_incorect}</p>}*/}
+                                {/*            {this.state.errors.mail && <p>{this.messages.mail_incorect}</p>}*/}
+                                {/*            {this.state.errors.message &&*/}
+                                {/*            <p>{this.messages.message_incorect}</p>}*/}
+                                {/*            {this.state.errors.accept &&*/}
+                                {/*            <p>{this.messages.accept_incorect}</p>}*/}
+                                {/*            {this.state.errors.adress && <p>{this.messages.adress_incorect}</p>}*/}
+                                {/*            {this.state.sent && <p>{this.state.sent}</p>}*/}
+                                {/*        </div>*/}
+                                {/*    </form>*/}
+                                {/*</div>*/}
                             </div>
                         </ScrollAnimation>
                     </div>

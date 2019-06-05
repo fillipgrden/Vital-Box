@@ -18,6 +18,14 @@
     margin: 0;
 }
 
+.side-drawer li {
+    width: 100%;
+}
+.side-drawer a {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
 .side-drawer.open {
     transform: translateX(0);
 }

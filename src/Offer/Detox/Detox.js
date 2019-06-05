@@ -5,10 +5,6 @@ import "./Detox.css"
 
 
 class Detox extends React.Component {
-    constructor(props, context) {
-        super(props, context);
-    }
-
     render() {
         const detoxImage = {
             backgroundImage: `url(${detox})`

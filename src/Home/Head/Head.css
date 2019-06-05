@@ -94,6 +94,11 @@
     transition: all 0.3s;
 }
 
+.header h2 {
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+}
+
 .header .container-img div.container-social a:hover i {
     transform: rotate(15deg);
 }
@@ -156,4 +161,22 @@ a.hvr-sweep-to-top {
 .hvr-sweep-to-top:hover:before, .hvr-sweep-to-top:focus:before, .hvr-sweep-to-top:active:before {
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
+}
+
+.header .logo {
+    position: absolute;
+    height: 300px;
+    left: 0;
+    bottom: 0;
+}
+
+.header .logo img {
+    height: 100%;
+}
+
+
+@media(max-width: 768px) {
+    .header .logo {
+        display: none;
+    }
 }

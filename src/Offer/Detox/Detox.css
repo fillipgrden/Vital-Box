@@ -23,7 +23,7 @@
 }
 
 #detox .container .detox-content p {
-    font-size: 1.5em;
+    font-size: 1.25em;
 }
 
 #detox .container .detox-content .flipInX {
@@ -45,9 +45,13 @@
     }
     #detox .container div {
         width: 100%;
-        height: 50%;
+        height: 50vh;
+    }
+    #detox .container .detox-content {
+        height: auto;
     }
     #detox .container .detox-content .wrapper {
         height: auto;
+        min-height: 50vh;
     }
 }

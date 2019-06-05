@@ -11,3 +11,10 @@
 #about h2 {
     text-align: center;
 }
+
+@media(max-width: 768px) {
+    #about .container {
+        padding: 60px 0px;
+    }
+
+}

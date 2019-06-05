@@ -65,19 +65,13 @@ class Calculator extends Component {
                                 <input type="number" name="age" placeholder="Wpisz swój wiek" value={this.state.age}
                                        onChange={this.handleChange}/>
                             </div>
-                            <div className="input-container">
-                                <div>
-                                    <input type="number" name="weight" placeholder="Wpisz swoją wagę"
+                                <div className="input-container">
+                                    <input type="number" name="weight" placeholder="Wpisz swoją wagę (kg)"
                                            value={this.state.weight}
                                            onChange={this.handleChange}/>
-                                    <label htmlFor="weight">kg</label>
-                                </div>
-                                <div>
-                                    <input type="number" name="height" placeholder="Wpisz swoj wzrost"
+                                    <input type="number" name="height" placeholder="Wpisz swoj wzrost (cm)"
                                            value={this.state.height}
                                            onChange={this.handleChange}/>
-                                    <label htmlFor="height">cm</label>
-                                </div>
                             </div>
                             <select name="activity" id="" onChange={this.handleChange}>
                                 <option value="1.2">brak aktywności, praca siedząca</option>
